@@ -2,16 +2,6 @@ import pandas as pd
 import kagglehub
 import os
 
-# Load data from GitHub
-github_url = "https://raw.githubusercontent.com/salomerivas/app-development/refs/heads/main/nfl_offensive_stats.csv"
-
-try:
-    git_df = pd.read_csv(github_url)
-    print("Data loaded successfully from GitHub.")
-    print(git_df.head())  # Display the first few rows of the loaded data in df_git
-except Exception as e:
-    print("Failed to load data from GitHub:", e)
-
 # Fetch data from Kaggle API
 try:
     path = kagglehub.dataset_download("philiphyde1/nfl-stats-1999-2022")  # Downloads the dataset
