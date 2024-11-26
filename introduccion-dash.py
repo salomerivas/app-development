@@ -22,7 +22,7 @@ app.layout = html.Div(  # Creamos una componente que realice la primera divisió
     children = [
         html.H1( # Primera fila
             children = [
-                "Introducción a Dash"
+                "Stats to Stars"
             ],
             id = "titulo",
             style = {  # Aquí aplico todo lo que necesite de CSS
@@ -37,7 +37,7 @@ app.layout = html.Div(  # Creamos una componente que realice la primera divisió
             children = [
                 html.H2(
                     children = [
-                        "Esto es un subtítulo H2 "
+                        "Predicting Nke's next NFL star"
                     ],
                     id = "primer_subtitulo",
                     style = {
