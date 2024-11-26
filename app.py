@@ -1,13 +1,12 @@
-
+import os
 import dash
-from dash import html
-from src import graphics, etl
+from dash import dcc, html
 
 app = dash.Dash(__name__)
-app.layout = html.Div(children=[
-    html.H1("¡Hola, Render!"),
-    html.P("Esta es una aplicación Dash desplegada en Render.")
-])
+
+app.layout = html.Div("Hello, Render!")
 
 if __name__ == "__main__":
-    app.run_server(debug=True)
+    # Use the PORT environment variable Render provides or default to 8050 for local testing
+    port = int(os.environ.get("PORT", 8050))
+    app.run_server(host="0.0.0.0", port=port, debug=False)
