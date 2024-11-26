@@ -1,12 +1,13 @@
+# app.py
 import dash
-from dash import dcc, html
+from dash import html
+from src import graphics, etl
 
-# Create the Dash app
 app = dash.Dash(__name__)
+app.layout = html.Div(children=[
+    html.H1("¡Hola, Render!"),
+    html.P("Esta es una aplicación Dash desplegada en Render.")
+])
 
-# Define the layout of the app
-app.layout = html.Div("Hello, Render!")
-
-# Run the app if this is the main file
 if __name__ == "__main__":
     app.run_server(debug=True)
