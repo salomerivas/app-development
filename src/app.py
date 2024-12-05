@@ -8,10 +8,10 @@ import kagglehub
 from plotly.colors import sample_colorscale
 import os
 from seaborn import color_palette
-import prediction
-import player_analysis
-import about
-from prediction import create_first_graph
+import StatstoStars.src.prediction as prediction
+import StatstoStars.src.player_analysis as player_analysis
+import StatstoStars.src.about as about
+from StatstoStars.src.prediction import create_first_graph
 
 
 color_palette = px.colors.qualitative.Dark24
